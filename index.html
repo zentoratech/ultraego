@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ultra Ego Fitness Management Software">
+    <title>Ultra Ego Fitness | Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <section id="loginScreen" class="login-screen">
+
+        <div class="login-glow glow-one"></div>
+        <div class="login-glow glow-two"></div>
+
+        <div class="login-card">
+
+            <div class="brand-mark">
+                UE
+            </div>
+
+            <div class="login-kicker">
+                SECURE MANAGEMENT TERMINAL
+            </div>
+
+            <h1>
+                ULTRA EGO
+            </h1>
+
+            <p>
+                Fitness management software for modern gym operations.
+            </p>
+
+            <form id="loginForm">
+
+                <label for="username">
+                    USERNAME
+                </label>
+
+                <input
+                    id="username"
+                    type="text"
+                    placeholder="admin"
+                    autocomplete="username"
+                >
+
+                <label for="password">
+                    PASSWORD
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="admin123"
+                    autocomplete="current-password"
+                >
+
+                <button
+                    class="primary-button full"
+                    type="submit"
+                >
+                    ENTER SYSTEM
+                </button>
+
+            </form>
+
+            <div class="login-note">
+                Demo access:
+                <strong>admin</strong>
+                /
+                <strong>admin123</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION -->
+    <div id="app" class="app hidden">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-mark small">
+                    UE
+                </div>
+
+                <div>
+                    <strong>
+                        ULTRA EGO
+                    </strong>
+
+                    <span>
+                        FITNESS SYSTEM
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="branch-box">
+
+                <span>
+                    ACTIVE BRANCH
+                </span>
+
+                <strong>
+                    Karachi Main
+                </strong>
+
+                <small>
+                    System status: online
+                </small>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-item active"
+                    data-page="dashboard"
+                >
+                    <span class="nav-number">01</span>
+                    <span>Overview</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="members"
+                >
+                    <span class="nav-number">02</span>
+                    <span>Members</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="attendance"
+                >
+                    <span class="nav-number">03</span>
+                    <span>Attendance</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="trainers"
+                >
+                    <span class="nav-number">04</span>
+                    <span>Trainers</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="memberships"
+                >
+                    <span class="nav-number">05</span>
+                    <span>Memberships</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="billing"
+                >
+                    <span class="nav-number">06</span>
+                    <span>Billing</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="reports"
+                >
+                    <span class="nav-number">07</span>
+                    <span>Reports</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-page="system"
+                >
+                    <span class="nav-number">08</span>
+                    <span>System</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="security-line">
+
+                    <span class="status-dot"></span>
+
+                    SECURE SESSION
+
+                </div>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+                    SIGN OUT
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <div class="breadcrumb">
+                        ULTRA EGO /
+                        <span id="pagePath">
+                            OVERVIEW
+                        </span>
+                    </div>
+
+                    <h2 id="pageTitle">
+                        Overview
+                    </h2>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <div class="date-box">
+
+                        <span id="currentDate">
+                            --
+                        </span>
+
+                        <strong id="currentTime">
+                            --:--:--
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        id="topAddMember"
+                        class="primary-button"
+                    >
+                        + ADD MEMBER
+                    </button>
+
+
+                    <div class="admin-chip">
+
+                        <div class="avatar">
+                            AR
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Admin
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section
+                id="pageView"
+                class="page-view"
+            ></section>
+
+
+            <footer class="footer">
+
+                ULTRA EGO FITNESS MANAGEMENT
+
+                <span>
+                    •
+                </span>
+
+                PRIVATE ADMIN WORKSPACE
+
+                <strong>
+                    <span class="status-dot"></span>
+                    SYSTEM ONLINE
+                </strong>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- MODAL -->
+    <div
+        id="modal"
+        class="modal hidden"
+    >
+
+        <div
+            class="modal-backdrop"
+            id="modalBackdrop"
+        ></div>
+
+        <div class="modal-card">
+
+            <button
+                id="closeModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        id="toastContainer"
+        class="toast-container"
+    ></div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
